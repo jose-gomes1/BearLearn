@@ -24,7 +24,7 @@ Inspirado em plataformas como o Duolingo, o BearLearn aposta numa aprendizagem i
 
 ## Tecnologias Utilizadas
 
-- **Godot Engine 4.x** – Desenvolvimento da aplicação
+- **Godot Engine 4.4** – Desenvolvimento da aplicação
 - **GDScript** – Lógica do programa
 - **Blender** – Adaptação do modelo 3D da mascote
 - **Sketchfab** – Obtenção do modelo base da mascote (Helpi)
