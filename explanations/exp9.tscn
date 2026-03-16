@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://gckd4mwubicc"]
+
+[ext_resource type="Script" uid="uid://pye16i337j45" path="res://scripts/button_explain.gd" id="1_f167y"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="1_ofyo0"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="2_qnx1q"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="3_g2vso"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="3_k47w6"]
+[ext_resource type="FontFile" uid="uid://c2va68mx0i2a1" path="res://assets/Fonts/Vipnagorgialla Bd.otf" id="6_qnx1q"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="7_k47w6"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="7_qnx1q"]
+[ext_resource type="Texture2D" uid="uid://eyuix5mlia6g" path="res://assets/arrow_right.svg" id="8_hy28g"]
+[ext_resource type="Texture2D" uid="uid://bbumjm0vco6wa" path="res://assets/arrow_left.svg" id="10_8pwh2"]
+[ext_resource type="Script" uid="uid://dmlnigs2p0oxy" path="res://scripts/explain_back.gd" id="11_uwv3v"]
+
+[node name="Node2D" type="Node2D" unique_id=1062135422]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=988242053 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("7_qnx1q")
+
+[node name="Label" type="Label" parent="." unique_id=1270873583]
+offset_left = -2.0
+offset_top = 20.0
+offset_right = 1333.0
+offset_bottom = 105.104
+scale = Vector2(0.488452, 0.634515)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_qnx1q")
+theme_override_font_sizes/font_size = 41
+text = "9. O que faz a instrução return em uma função?"
+
+[node name="Label2" type="Label" parent="." unique_id=1092980625]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.5
+offset_top = 105.0
+offset_right = 1835.5
+offset_bottom = 842.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.338903, 0.519614)
+theme = ExtResource("1_ofyo0")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "O return não encerra o programa inteiro, 
+só a função atual.
+
+Também não imprime nada na tela,
+apenas devolve um resultado
+para quem chamou a função.
+
+Portanto,
+a correta é \"Retorna um valor\"."
+
+[node name="Button5" type="Button" parent="." unique_id=1694441032]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("2_qnx1q")
+theme_override_styles/hover = ExtResource("3_k47w6")
+icon = ExtResource("7_k47w6")
+expand_icon = true
+script = ExtResource("3_g2vso")
+
+[node name="Button" type="Button" parent="." unique_id=2007740201]
+offset_left = 436.2588
+offset_top = 966.00006
+offset_right = 488.19382
+offset_bottom = 1009.4391
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("1_ofyo0")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("2_qnx1q")
+theme_override_styles/hover = ExtResource("3_k47w6")
+icon = ExtResource("8_hy28g")
+expand_icon = true
+script = ExtResource("1_f167y")
+
+[node name="Button4" type="Button" parent="." unique_id=1420718445]
+offset_left = 72.25883
+offset_top = 966.0
+offset_right = 124.193855
+offset_bottom = 1009.439
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("1_ofyo0")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("2_qnx1q")
+theme_override_styles/hover = ExtResource("3_k47w6")
+icon = ExtResource("10_8pwh2")
+expand_icon = true
+script = ExtResource("11_uwv3v")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]

@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b0y3p0t76dwl0"]
+
+[ext_resource type="Script" uid="uid://cr0wyfhoi4lvl" path="res://scripts/dados.gd" id="1_4hy44"]
+[ext_resource type="Texture2D" uid="uid://yh5ff5n3l3g7" path="res://assets/logo.png" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://cqh1jlktmp1f4" path="res://scripts/mudar_cor.gd" id="2_lmgs8"]
+[ext_resource type="Script" uid="uid://bpu03cr3jqnnc" path="res://scripts/comecar.gd" id="3_4hy44"]
+[ext_resource type="Script" uid="uid://cqiollxkojvh8" path="res://scripts/explanations.gd" id="3_mae5d"]
+[ext_resource type="Texture2D" uid="uid://ccwf856odvsu7" path="res://assets/bear3.png" id="3_ytr4m"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="4_ecwwl"]
+[ext_resource type="StyleBox" uid="uid://dxu0inj62yt6a" path="res://assets/themes/style3.tres" id="5_kk3ma"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="6_kk3ma"]
+
+[node name="Node2D" type="Node2D" unique_id=998738326]
+script = ExtResource("1_4hy44")
+
+[node name="bgk" type="ColorRect" parent="." unique_id=709934692]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1939198921]
+position = Vector2(332, 208)
+scale = Vector2(1.90771, 1.78303)
+texture = ExtResource("1_lti8b")
+
+[node name="Bear3" type="Sprite2D" parent="." unique_id=907014264]
+position = Vector2(340, 828)
+scale = Vector2(0.598148, 0.6)
+texture = ExtResource("3_ytr4m")
+
+[node name="Button" type="Button" parent="." unique_id=108342369]
+offset_left = 57.0
+offset_top = 416.0
+offset_right = 207.0
+offset_bottom = 447.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("4_ecwwl")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_kk3ma")
+theme_override_styles/hover = ExtResource("6_kk3ma")
+text = "Exercícios"
+script = ExtResource("3_4hy44")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="." unique_id=2145449011]
+offset_left = 27.0
+offset_top = 573.0
+offset_right = 199.0
+offset_bottom = 604.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("4_ecwwl")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_kk3ma")
+theme_override_styles/hover = ExtResource("6_kk3ma")
+text = "Explicações"
+script = ExtResource("3_mae5d")
+
+[node name="Button3" type="Button" parent="." unique_id=553224653]
+offset_right = 159.0
+offset_bottom = 49.0
+theme = ExtResource("4_ecwwl")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_kk3ma")
+theme_override_styles/hover = ExtResource("5_kk3ma")
+text = "Dark Mode"
+script = ExtResource("2_lmgs8")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]

@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://barlk27ksr3kj"]
+
+[ext_resource type="Script" uid="uid://pye16i337j45" path="res://scripts/button_explain.gd" id="1_0osl6"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="1_fc2uq"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="2_v5mpt"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="3_bmy5a"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="3_xibj5"]
+[ext_resource type="StyleBox" uid="uid://d0gdvu5h1trcf" path="res://assets/themes/style2.tres" id="5_nxogq"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="7_bmy5a"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="7_v5mpt"]
+[ext_resource type="Texture2D" uid="uid://eyuix5mlia6g" path="res://assets/arrow_right.svg" id="8_03cft"]
+[ext_resource type="Texture2D" uid="uid://bbumjm0vco6wa" path="res://assets/arrow_left.svg" id="10_wcp8b"]
+[ext_resource type="Script" uid="uid://dmlnigs2p0oxy" path="res://scripts/explain_back.gd" id="11_tl23m"]
+
+[node name="Node2D" type="Node2D" unique_id=1226684750]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=742619235 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("7_v5mpt")
+
+[node name="Label" type="Label" parent="." unique_id=1161689741]
+offset_left = 4.0
+offset_top = 14.0
+offset_right = 1291.0
+offset_bottom = 127.0
+scale = Vector2(0.488452, 0.634515)
+theme = ExtResource("1_fc2uq")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 49
+text = "13. Declare uma variável inteira
+ chamada i e com o valor 5 
+por defeito
+(não esquecer do ponto e vírgula)"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=495053524]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 365.0
+offset_right = 2164.0
+offset_bottom = 1236.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.338903, 0.519614)
+theme = ExtResource("1_fc2uq")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 68
+text = "Em C++ a declaração de variáveis
+segue o formato:
+tipo nome = valor;
+
+int -> tipo inteiro.
+i -> nome da variável.
+= 5 -> valor inicial (inicialização).
+; -> obrigatório no fim de cada instrução
+em C++."
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=1088379287]
+offset_left = 191.0
+offset_top = 186.0
+offset_right = 345.0
+offset_bottom = 273.0
+scale = Vector2(1.67254, 1.65912)
+theme = ExtResource("1_fc2uq")
+theme_override_styles/normal = ExtResource("5_nxogq")
+text = "int i = 5;"
+
+[node name="Button5" type="Button" parent="." unique_id=605451710]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("2_v5mpt")
+theme_override_styles/hover = ExtResource("3_bmy5a")
+icon = ExtResource("7_bmy5a")
+expand_icon = true
+script = ExtResource("3_xibj5")
+
+[node name="Button" type="Button" parent="." unique_id=1692273875]
+offset_left = 436.2588
+offset_top = 966.00006
+offset_right = 488.19382
+offset_bottom = 1009.4391
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("1_fc2uq")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("2_v5mpt")
+theme_override_styles/hover = ExtResource("3_bmy5a")
+icon = ExtResource("8_03cft")
+expand_icon = true
+script = ExtResource("1_0osl6")
+
+[node name="Button4" type="Button" parent="." unique_id=865193010]
+offset_left = 72.25883
+offset_top = 966.0
+offset_right = 124.193855
+offset_bottom = 1009.439
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("1_fc2uq")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("2_v5mpt")
+theme_override_styles/hover = ExtResource("3_bmy5a")
+icon = ExtResource("10_wcp8b")
+expand_icon = true
+script = ExtResource("11_tl23m")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]

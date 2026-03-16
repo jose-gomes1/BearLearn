@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://c3hdo1m1fbbqq"]
+
+[ext_resource type="Texture2D" uid="uid://c11p647vmaov4" path="res://assets/bear1.png" id="1_fa3s7"]
+[ext_resource type="Script" uid="uid://pye16i337j45" path="res://scripts/button_explain.gd" id="1_yuouo"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="2_s1xwu"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="3_pbjfc"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="3_qqcxx"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="4_w2vvy"]
+[ext_resource type="StyleBox" uid="uid://d0gdvu5h1trcf" path="res://assets/themes/style2.tres" id="7_dnuau"]
+[ext_resource type="FontFile" uid="uid://c2va68mx0i2a1" path="res://assets/Fonts/Vipnagorgialla Bd.otf" id="7_qqcxx"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="9_qqcxx"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="9_w2vvy"]
+[ext_resource type="Texture2D" uid="uid://eyuix5mlia6g" path="res://assets/arrow_right.svg" id="10_su8md"]
+
+[node name="Node2D" type="Node2D" unique_id=1104182548]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=409162740 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("9_qqcxx")
+
+[node name="Bear1" type="Sprite2D" parent="." unique_id=948026548]
+position = Vector2(496.99997, 789)
+scale = Vector2(0.35717592, 0.3690361)
+texture = ExtResource("1_fa3s7")
+
+[node name="Label" type="Label" parent="." unique_id=259768966]
+offset_right = 117.0
+offset_bottom = 88.0
+theme = ExtResource("2_s1xwu")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "1."
+
+[node name="Label2" type="Label" parent="." unique_id=40753206]
+offset_left = 30.0
+offset_top = 379.0
+offset_right = 1511.0
+offset_bottom = 1084.0
+scale = Vector2(0.376347, 0.468659)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_qqcxx")
+theme_override_font_sizes/font_size = 46
+text = "#include <iostream> inclui a biblioteca
+necessária para entrada/saída.
+
+using namespace std; permite usar 
+cout sem escrever std::cout.
+
+cout << \"Hello, World!\" << endl; 
+imprime o texto \"Hello, World!\" no terminal.
+return 0; 
+indica que o programa terminou corretamente.
+
+Output:"
+
+[node name="Button2" type="Button" parent="." unique_id=270249388]
+offset_left = 17.0
+offset_top = 58.0
+offset_right = 372.188
+offset_bottom = 253.0
+scale = Vector2(1.70614, 1.63828)
+theme = ExtResource("2_s1xwu")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = ExtResource("7_dnuau")
+text = "#include <iostream>
+using namespace std;
+
+int main() {
+    cout << \"Hello, World!\" << endl;
+    return 0;
+}"
+
+[node name="Button3" type="Button" parent="." unique_id=1416777632]
+offset_left = 7.0
+offset_top = 730.0
+offset_right = 365.0
+offset_bottom = 899.0
+scale = Vector2(0.798525, 0.711642)
+theme = ExtResource("2_s1xwu")
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = ExtResource("7_dnuau")
+text = "Hello, World!"
+
+[node name="Button5" type="Button" parent="." unique_id=294129930]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("3_qqcxx")
+theme_override_styles/hover = ExtResource("4_w2vvy")
+icon = ExtResource("9_w2vvy")
+expand_icon = true
+script = ExtResource("3_pbjfc")
+
+[node name="Button" type="Button" parent="." unique_id=1728393752]
+offset_left = 436.2588
+offset_top = 966.00006
+offset_right = 488.19382
+offset_bottom = 1009.4391
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("2_s1xwu")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("3_qqcxx")
+theme_override_styles/hover = ExtResource("4_w2vvy")
+icon = ExtResource("10_su8md")
+expand_icon = true
+script = ExtResource("1_yuouo")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

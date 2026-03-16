@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cdqranu72pj86"]
+
+[ext_resource type="Script" uid="uid://nd6nm80324bv" path="res://scripts/control.gd" id="1_vwwrp"]
+[ext_resource type="Script" uid="uid://46smy035erkl" path="res://scripts/label.gd" id="2_8xu3h"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="3_emviu"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="3_uar46"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="4_hpowe"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="5_uar46"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="7_hpowe"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="8_hpowe"]
+
+[node name="Node2D" type="Node2D" unique_id=1783794971]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=1691184636 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("8_hpowe")
+
+[node name="Control" type="Control" parent="." unique_id=239017348]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vwwrp")
+
+[node name="CheckButton" type="Button" parent="Control" unique_id=218255554]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 767.0
+offset_right = 399.0
+offset_bottom = 814.0
+scale = Vector2(1.5, 1.5)
+theme = ExtResource("3_uar46")
+theme_override_styles/normal = ExtResource("4_hpowe")
+theme_override_styles/hover = ExtResource("5_uar46")
+text = "Submeter resposta"
+
+[node name="LineEdit" type="LineEdit" parent="Control" unique_id=449945136]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 479.0
+offset_right = 327.5
+offset_bottom = 539.0
+scale = Vector2(2, 2)
+theme = ExtResource("3_uar46")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = ExtResource("4_hpowe")
+placeholder_text = "Insira a sua resposta"
+alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1275825855]
+offset_right = 117.0
+offset_bottom = 88.0
+theme = ExtResource("3_uar46")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+script = ExtResource("2_8xu3h")
+
+[node name="Control2" type="Control" parent="." unique_id=5577788]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 116.0
+offset_right = 40.0
+offset_bottom = 156.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2" unique_id=709578809]
+layout_mode = 0
+offset_right = 648.0
+offset_bottom = 135.0
+
+[node name="Label2" type="Label" parent="Control2/HBoxContainer" unique_id=126020822]
+layout_mode = 2
+theme = ExtResource("3_uar46")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 52
+text = "Qual é a biblioteca 
+padrão
+usada em C++?"
+horizontal_alignment = 1
+
+[node name="Button5" type="Button" parent="." unique_id=824775040]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("4_hpowe")
+theme_override_styles/hover = ExtResource("5_uar46")
+icon = ExtResource("7_hpowe")
+expand_icon = true
+script = ExtResource("3_emviu")

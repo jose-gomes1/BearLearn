@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://b8vgwpskslt00"]
+
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="1_2pg3u"]
+[ext_resource type="Script" uid="uid://nd6nm80324bv" path="res://scripts/control.gd" id="1_k0wex"]
+[ext_resource type="Script" uid="uid://46smy035erkl" path="res://scripts/label.gd" id="2_ssteg"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="3_avdjn"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="3_x63gm"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="4_x63gm"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="7_24730"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="7_vn2kh"]
+
+[node name="Node2D" type="Node2D" unique_id=1384179143]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=573085992 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("7_vn2kh")
+
+[node name="Control" type="Control" parent="." unique_id=81499097]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_k0wex")
+
+[node name="CheckButton" type="Button" parent="Control" unique_id=2022243708]
+layout_mode = 0
+anchor_left = 2.9
+anchor_top = 19.225
+anchor_right = 13.8125
+anchor_bottom = 20.9875
+offset_right = -145.5
+offset_bottom = -23.5
+scale = Vector2(1.5, 1.5)
+theme = ExtResource("1_2pg3u")
+theme_override_styles/normal = ExtResource("3_x63gm")
+theme_override_styles/hover = ExtResource("4_x63gm")
+text = "Submeter resposta"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="Control" unique_id=936836776]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 450.0
+offset_right = 319.0
+offset_bottom = 510.0
+scale = Vector2(2, 2)
+theme = ExtResource("1_2pg3u")
+theme_override_styles/normal = ExtResource("3_x63gm")
+placeholder_text = "Insira a sua resposta"
+alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1422900449]
+offset_right = 117.0
+offset_bottom = 88.0
+theme = ExtResource("1_2pg3u")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+script = ExtResource("2_ssteg")
+
+[node name="Control2" type="Control" parent="." unique_id=1773126535]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 196.0
+offset_right = 40.0
+offset_bottom = 236.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2" unique_id=627670174]
+layout_mode = 0
+offset_right = 648.0
+offset_bottom = 135.0
+
+[node name="Label2" type="Label" parent="Control2/HBoxContainer" unique_id=2114081881]
+layout_mode = 2
+theme = ExtResource("1_2pg3u")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 52
+text = "Como se insere 
+uma
+biblioteca em C++?"
+horizontal_alignment = 1
+
+[node name="Button5" type="Button" parent="." unique_id=1174518259]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("3_x63gm")
+theme_override_styles/hover = ExtResource("4_x63gm")
+icon = ExtResource("7_24730")
+expand_icon = true
+script = ExtResource("3_avdjn")

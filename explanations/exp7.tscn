@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://dqewcu56cxyi0"]
+
+[ext_resource type="Script" uid="uid://pye16i337j45" path="res://scripts/button_explain.gd" id="1_mxf72"]
+[ext_resource type="Texture2D" uid="uid://c2ac7jdk5xeuc" path="res://assets/bear2.png" id="1_oycnf"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="3_42h36"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="3_sckd8"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="3_xbp0x"]
+[ext_resource type="StyleBox" uid="uid://d0gdvu5h1trcf" path="res://assets/themes/style2.tres" id="4_kqyy8"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="4_tsxdn"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="8_7lqxp"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="8_tsxdn"]
+[ext_resource type="Texture2D" uid="uid://eyuix5mlia6g" path="res://assets/arrow_right.svg" id="9_eiikm"]
+[ext_resource type="Texture2D" uid="uid://bbumjm0vco6wa" path="res://assets/arrow_left.svg" id="11_dwjab"]
+[ext_resource type="Script" uid="uid://dmlnigs2p0oxy" path="res://scripts/explain_back.gd" id="12_h2i7o"]
+
+[node name="Node2D" type="Node2D" unique_id=838464593]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=572986458 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("8_tsxdn")
+
+[node name="Bear2" type="Sprite2D" parent="." unique_id=1807531270]
+position = Vector2(353.125, 790.75)
+scale = Vector2(0.329861, 0.336574)
+texture = ExtResource("1_oycnf")
+
+[node name="Label" type="Label" parent="." unique_id=1042836499]
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 1290.0
+offset_bottom = 98.0
+scale = Vector2(0.488452, 0.634515)
+theme = ExtResource("3_sckd8")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "7. Qual palavra-chave define uma constante em C++?"
+
+[node name="Label2" type="Label" parent="." unique_id=361894]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = 406.0
+offset_right = 1882.0
+offset_bottom = 819.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.338903, 0.519614)
+theme = ExtResource("3_sckd8")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "const define uma variável cujo valor não
+pode ser alterado depois de inicializado.
+let é de JavaScript, 
+e #define é uma diretiva de pré-processador, 
+mas não uma palavra-chave C++."
+
+[node name="Button2" type="Button" parent="." unique_id=117820874]
+offset_left = 101.0
+offset_top = 61.0
+offset_right = 348.0
+offset_bottom = 253.0
+scale = Vector2(1.67254, 1.65912)
+theme = ExtResource("3_sckd8")
+theme_override_styles/normal = ExtResource("4_kqyy8")
+text = "const"
+
+[node name="Button5" type="Button" parent="." unique_id=1065865718]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("3_42h36")
+theme_override_styles/hover = ExtResource("4_tsxdn")
+icon = ExtResource("8_7lqxp")
+expand_icon = true
+script = ExtResource("3_xbp0x")
+
+[node name="Button" type="Button" parent="." unique_id=1834872224]
+offset_left = 436.2588
+offset_top = 966.00006
+offset_right = 488.19382
+offset_bottom = 1009.4391
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("3_sckd8")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("3_42h36")
+theme_override_styles/hover = ExtResource("4_tsxdn")
+icon = ExtResource("9_eiikm")
+expand_icon = true
+script = ExtResource("1_mxf72")
+
+[node name="Button4" type="Button" parent="." unique_id=319405164]
+offset_left = 72.25883
+offset_top = 966.0
+offset_right = 124.193855
+offset_bottom = 1009.439
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("3_sckd8")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("3_42h36")
+theme_override_styles/hover = ExtResource("4_tsxdn")
+icon = ExtResource("11_dwjab")
+expand_icon = true
+script = ExtResource("12_h2i7o")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]

@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnmrhlfw4k62m"]
+
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="1_4x0fk"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="1_l3tum"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="2_4x0fk"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="3_8e1nn"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="4_uxvcs"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="bgk" type="ColorRect" parent="." groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("1_4x0fk")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 37.0
+offset_top = 534.0
+offset_right = 196.0
+offset_bottom = 565.0
+scale = Vector2(3.64736, 3.78703)
+theme = ExtResource("2_4x0fk")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/hover = ExtResource("4_uxvcs")
+theme_override_styles/normal = ExtResource("3_8e1nn")
+text = "Voltar ao Menu"
+script = ExtResource("1_l3tum")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -3.0
+offset_top = 95.0
+offset_right = 663.0
+offset_bottom = 398.0
+theme = ExtResource("2_4x0fk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 82
+text = "Chegaste
+ao fim
+dos
+exercícios"
+horizontal_alignment = 1
+vertical_alignment = 1

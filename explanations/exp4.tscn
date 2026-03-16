@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bd2ov3vvhfmmx"]
+
+[ext_resource type="Script" uid="uid://pye16i337j45" path="res://scripts/button_explain.gd" id="1_5vppn"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="1_wtbup"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="2_l5po2"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="3_3wv4f"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="3_s1qq2"]
+[ext_resource type="StyleBox" uid="uid://d0gdvu5h1trcf" path="res://assets/themes/style2.tres" id="6_6qq0b"]
+[ext_resource type="FontFile" uid="uid://c2va68mx0i2a1" path="res://assets/Fonts/Vipnagorgialla Bd.otf" id="6_l5po2"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="8_l5po2"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="8_s1qq2"]
+[ext_resource type="Texture2D" uid="uid://eyuix5mlia6g" path="res://assets/arrow_right.svg" id="9_ew3s1"]
+[ext_resource type="Texture2D" uid="uid://bbumjm0vco6wa" path="res://assets/arrow_left.svg" id="11_bmy7v"]
+[ext_resource type="Script" uid="uid://dmlnigs2p0oxy" path="res://scripts/explain_back.gd" id="12_qmjf2"]
+
+[node name="Node2D" type="Node2D" unique_id=1160374663]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=295721599 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("8_l5po2")
+
+[node name="Label" type="Label" parent="." unique_id=1848640305]
+offset_left = 38.0
+offset_right = 712.0
+offset_bottom = 107.0
+scale = Vector2(0.84, 0.84)
+theme = ExtResource("1_wtbup")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "4. Como se declara um 
+pointer em C++?"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=1548297658]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = 94.0
+offset_right = 1545.0
+offset_bottom = 497.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.588832, 0.892058)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_l5po2")
+theme_override_font_sizes/font_size = 53
+text = "Em C++, para declarar 
+um pointer para int, 
+usamos o * junto do tipo:"
+
+[node name="Button2" type="Button" parent="." unique_id=189501042]
+offset_left = 112.0
+offset_top = 287.0
+offset_right = 359.0
+offset_bottom = 456.0
+scale = Vector2(1.70614, 1.63828)
+theme = ExtResource("1_wtbup")
+theme_override_styles/normal = ExtResource("6_6qq0b")
+text = "int *p;"
+
+[node name="Button5" type="Button" parent="." unique_id=279653043]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("2_l5po2")
+theme_override_styles/hover = ExtResource("3_s1qq2")
+icon = ExtResource("8_s1qq2")
+expand_icon = true
+script = ExtResource("3_3wv4f")
+
+[node name="Button" type="Button" parent="." unique_id=2021617053]
+offset_left = 436.2588
+offset_top = 966.00006
+offset_right = 488.19382
+offset_bottom = 1009.4391
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("1_wtbup")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("2_l5po2")
+theme_override_styles/hover = ExtResource("3_s1qq2")
+icon = ExtResource("9_ew3s1")
+expand_icon = true
+script = ExtResource("1_5vppn")
+
+[node name="Button4" type="Button" parent="." unique_id=2042801597]
+offset_left = 72.25883
+offset_top = 966.0
+offset_right = 124.193855
+offset_bottom = 1009.439
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("1_wtbup")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("2_l5po2")
+theme_override_styles/hover = ExtResource("3_s1qq2")
+icon = ExtResource("11_bmy7v")
+expand_icon = true
+script = ExtResource("12_qmjf2")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]

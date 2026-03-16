@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://u15tfgculm11"]
+
+[ext_resource type="Texture2D" uid="uid://cvljbhhtwn6it" path="res://assets/bear-gameover.png" id="1_ccer4"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="1_k2vha"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="1_y26ei"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="2_28vn7"]
+[ext_resource type="Script" uid="uid://b78xunisjeju6" path="res://scripts/points.gd" id="2_yxx3c"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="3_k2vha"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="4_fkf4o"]
+
+[node name="GameOver" type="Node2D" unique_id=1281872571]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=1584097306 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("1_k2vha")
+
+[node name="Bear-gameover" type="Sprite2D" parent="." unique_id=1827482022]
+position = Vector2(319, 799.5)
+scale = Vector2(0.609259, 0.652778)
+texture = ExtResource("1_ccer4")
+
+[node name="Button" type="Button" parent="." unique_id=2001631819]
+offset_left = 60.0
+offset_top = 424.0
+offset_right = 205.0
+offset_bottom = 455.0
+scale = Vector2(3.64736, 3.78703)
+theme = ExtResource("2_28vn7")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("3_k2vha")
+theme_override_styles/hover = ExtResource("4_fkf4o")
+text = "Voltar ao Menu"
+script = ExtResource("1_y26ei")
+
+[node name="Label" type="Label" parent="." unique_id=664160407]
+offset_left = 118.0
+offset_top = 583.0
+offset_right = 546.0
+offset_bottom = 671.0
+theme = ExtResource("2_28vn7")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 27
+theme_override_font_sizes/font_size = 40
+text = "Pontos: 1 / 15"
+script = ExtResource("2_yxx3c")
+
+[node name="Label2" type="Label" parent="." unique_id=511892705]
+offset_left = -3.0
+offset_top = 95.0
+offset_right = 663.0
+offset_bottom = 398.0
+theme = ExtResource("2_28vn7")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 82
+text = "Uh Oh! 
+Parece que 
+erraste..."
+horizontal_alignment = 1
+vertical_alignment = 1

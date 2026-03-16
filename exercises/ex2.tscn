@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://b2w4qa3xvs220"]
+
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="1_exn60"]
+[ext_resource type="Script" uid="uid://b8efiyjnum2a2" path="res://scripts/exercises.gd" id="1_knpkt"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="1_v75kl"]
+[ext_resource type="StyleBox" uid="uid://d0gdvu5h1trcf" path="res://assets/themes/style2.tres" id="2_btm1j"]
+[ext_resource type="Script" uid="uid://xv7tr8baqxyq" path="res://scripts/loss.gd" id="2_rnrxb"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="3_btm1j"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="3_exn60"]
+[ext_resource type="Script" uid="uid://46smy035erkl" path="res://scripts/label.gd" id="3_rnrxb"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="4_xf1gm"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="9_4tk3s"]
+
+[node name="Node2D" type="Node2D" unique_id=1349160736]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=1441321406 groups=["backgrounds"]]
+z_index = -1000
+offset_left = -1.52588e-05
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("1_exn60")
+
+[node name="Button" type="Button" parent="." unique_id=283401486]
+offset_left = 25.0
+offset_top = 200.99998
+offset_right = 347.0
+offset_bottom = 393.0
+scale = Vector2(1.84821, 1.75933)
+theme = ExtResource("1_v75kl")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = ExtResource("2_btm1j")
+theme_override_styles/hover = ExtResource("3_btm1j")
+text = "#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5, b = 10;
+    cout << \"Soma: \" << (a + b) << endl;
+    return 0;
+}"
+
+[node name="Button2" type="Button" parent="." unique_id=990441238]
+offset_left = 46.0
+offset_top = 562.0
+offset_right = 209.819
+offset_bottom = 594.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("1_v75kl")
+theme_override_styles/normal = ExtResource("3_exn60")
+theme_override_styles/hover = ExtResource("3_btm1j")
+text = "Soma: 15"
+script = ExtResource("1_knpkt")
+
+[node name="Button3" type="Button" parent="." unique_id=1704032680]
+offset_left = 49.0
+offset_top = 695.0
+offset_right = 211.0
+offset_bottom = 726.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("1_v75kl")
+theme_override_styles/normal = ExtResource("3_exn60")
+theme_override_styles/hover = ExtResource("3_btm1j")
+text = "15"
+script = ExtResource("2_rnrxb")
+
+[node name="Button4" type="Button" parent="." unique_id=1863754132]
+offset_left = 49.0
+offset_top = 826.0
+offset_right = 211.0
+offset_bottom = 857.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("1_v75kl")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = ExtResource("3_exn60")
+theme_override_styles/hover = ExtResource("3_btm1j")
+text = "Erro de compilação
+"
+script = ExtResource("2_rnrxb")
+
+[node name="Label" type="Label" parent="." unique_id=956575337]
+offset_right = 117.0
+offset_bottom = 88.0
+theme = ExtResource("1_v75kl")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+script = ExtResource("3_rnrxb")
+
+[node name="Control" type="Control" parent="." unique_id=1302505848]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -4.0
+offset_top = 36.0
+offset_right = 36.0
+offset_bottom = 76.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1943163851]
+layout_mode = 0
+offset_right = 648.0
+offset_bottom = 135.0
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer" unique_id=1114662466]
+layout_mode = 2
+theme = ExtResource("1_v75kl")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 52
+text = "Qual é a saída 
+do código abaixo?"
+horizontal_alignment = 1
+
+[node name="Button6" type="Button" parent="." unique_id=1362403017]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("3_exn60")
+theme_override_styles/hover = ExtResource("3_btm1j")
+icon = ExtResource("9_4tk3s")
+expand_icon = true
+script = ExtResource("4_xf1gm")
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

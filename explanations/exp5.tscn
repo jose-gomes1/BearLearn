@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://bu3r5jcexrsv0"]
+
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="1_1wcne"]
+[ext_resource type="Script" uid="uid://pye16i337j45" path="res://scripts/button_explain.gd" id="1_4dlwj"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="2_8wwqi"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="3_en2i8"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="3_yptch"]
+[ext_resource type="StyleBox" uid="uid://d0gdvu5h1trcf" path="res://assets/themes/style2.tres" id="5_dtxtm"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="7_8wwqi"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="7_yptch"]
+[ext_resource type="Texture2D" uid="uid://eyuix5mlia6g" path="res://assets/arrow_right.svg" id="8_lfdmi"]
+[ext_resource type="Texture2D" uid="uid://bbumjm0vco6wa" path="res://assets/arrow_left.svg" id="10_s21pl"]
+[ext_resource type="Script" uid="uid://dmlnigs2p0oxy" path="res://scripts/explain_back.gd" id="11_oon58"]
+
+[node name="Node2D" type="Node2D" unique_id=257866419]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=855604589 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("7_8wwqi")
+
+[node name="Label" type="Label" parent="." unique_id=1479318247]
+offset_right = 117.0
+offset_bottom = 88.0
+theme = ExtResource("1_1wcne")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "5."
+
+[node name="Label2" type="Label" parent="." unique_id=369576397]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 382.0
+offset_right = 1729.0
+offset_bottom = 1219.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.376347, 0.468659)
+theme = ExtResource("1_1wcne")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "x++ é o pós-incremento,
+ ou seja:
+
+O primeiro o valor atual de x (10)
+é usado na expressão.
+
+Depois x é incrementado (x = 11).
+
+cout << x++ imprime 10,
+ mas internamente x incrementa o 1 depois.
+
+Output:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=1640200795]
+offset_left = 62.0
+offset_top = 16.0
+offset_right = 374.0
+offset_bottom = 239.0
+scale = Vector2(1.70614, 1.63828)
+theme = ExtResource("1_1wcne")
+theme_override_styles/normal = ExtResource("5_dtxtm")
+text = "#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    cout << x++ << endl;
+    return 0;
+}"
+
+[node name="Button3" type="Button" parent="." unique_id=1933305334]
+offset_left = 3.0
+offset_top = 718.0
+offset_right = 211.0
+offset_bottom = 851.0
+scale = Vector2(0.798525, 0.711642)
+theme = ExtResource("1_1wcne")
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = ExtResource("5_dtxtm")
+text = "10"
+
+[node name="Button5" type="Button" parent="." unique_id=1828708071]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("2_8wwqi")
+theme_override_styles/hover = ExtResource("3_yptch")
+icon = ExtResource("7_yptch")
+expand_icon = true
+script = ExtResource("3_en2i8")
+
+[node name="Button" type="Button" parent="." unique_id=144470307]
+offset_left = 436.2588
+offset_top = 966.00006
+offset_right = 488.19382
+offset_bottom = 1009.4391
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("1_1wcne")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("2_8wwqi")
+theme_override_styles/hover = ExtResource("3_yptch")
+icon = ExtResource("8_lfdmi")
+expand_icon = true
+script = ExtResource("1_4dlwj")
+
+[node name="Button4" type="Button" parent="." unique_id=2078429745]
+offset_left = 72.25883
+offset_top = 966.0
+offset_right = 124.193855
+offset_bottom = 1009.439
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("1_1wcne")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("2_8wwqi")
+theme_override_styles/hover = ExtResource("3_yptch")
+icon = ExtResource("10_s21pl")
+expand_icon = true
+script = ExtResource("11_oon58")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]

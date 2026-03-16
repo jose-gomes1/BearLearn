@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://b2l847bpvlpxg"]
+
+[ext_resource type="Script" uid="uid://nd6nm80324bv" path="res://scripts/control.gd" id="1_0ujnx"]
+[ext_resource type="Script" uid="uid://46smy035erkl" path="res://scripts/label.gd" id="2_mvkoo"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="3_cl8a0"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="3_xdbpv"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="4_fqyth"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="5_cl8a0"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="7_fqyth"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="8_fqyth"]
+
+[node name="Node2D" type="Node2D" unique_id=1933052264]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=70271853 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("8_fqyth")
+
+[node name="Control" type="Control" parent="." unique_id=1087308096]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0ujnx")
+
+[node name="CheckButton" type="Button" parent="Control" unique_id=770803015]
+layout_mode = 0
+anchor_left = 3.125
+anchor_top = 18.875
+anchor_right = 13.4
+anchor_bottom = 20.6375
+offset_right = -137.0
+offset_bottom = -23.5
+scale = Vector2(1.5, 1.5)
+theme = ExtResource("3_cl8a0")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("4_fqyth")
+theme_override_styles/hover = ExtResource("5_cl8a0")
+text = "Submeter resposta"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="Control" unique_id=1774060348]
+layout_mode = 0
+anchor_left = 0.15
+anchor_top = 10.375
+anchor_right = 16.05
+anchor_bottom = 13.375
+offset_right = -318.0
+offset_bottom = -60.0
+scale = Vector2(2, 2)
+theme = ExtResource("3_cl8a0")
+theme_override_styles/normal = ExtResource("4_fqyth")
+placeholder_text = "Insira a sua resposta"
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1496412048]
+offset_right = 117.0
+offset_bottom = 88.0
+theme = ExtResource("3_cl8a0")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+script = ExtResource("2_mvkoo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Control2" type="Control" parent="." unique_id=1409695472]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 73.0
+offset_top = 108.0
+offset_right = 113.0
+offset_bottom = 148.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2" unique_id=2055331359]
+layout_mode = 0
+offset_right = 648.0
+offset_bottom = 135.0
+
+[node name="Label2" type="Label" parent="Control2/HBoxContainer" unique_id=1400147699]
+layout_mode = 2
+theme = ExtResource("3_cl8a0")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 52
+text = "O que é uma 
+string para
+o compilador?"
+horizontal_alignment = 1
+
+[node name="Button5" type="Button" parent="." unique_id=162864900]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("4_fqyth")
+theme_override_styles/hover = ExtResource("5_cl8a0")
+icon = ExtResource("7_fqyth")
+expand_icon = true
+script = ExtResource("3_xdbpv")

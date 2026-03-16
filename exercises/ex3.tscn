@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://bs838n2glo4am"]
+
+[ext_resource type="Script" uid="uid://b8efiyjnum2a2" path="res://scripts/exercises.gd" id="1_ck2b0"]
+[ext_resource type="Script" uid="uid://xv7tr8baqxyq" path="res://scripts/loss.gd" id="2_2cddx"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="2_ecppi"]
+[ext_resource type="Script" uid="uid://46smy035erkl" path="res://scripts/label.gd" id="3_2cddx"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="3_fxppd"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="4_6a7m8"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="4_fxppd"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="8_7638u"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="9_7638u"]
+
+[node name="Node2D" type="Node2D" unique_id=1013525965]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=752842123 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("9_7638u")
+
+[node name="Button2" type="Button" parent="." unique_id=2093196440]
+offset_left = 9.00001
+offset_top = 545.0
+offset_right = 194.0
+offset_bottom = 599.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("2_ecppi")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("3_fxppd")
+theme_override_styles/hover = ExtResource("4_fxppd")
+text = "O programa dá 
+erro de execução"
+script = ExtResource("1_ck2b0")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="." unique_id=1194175698]
+offset_left = 7.00001
+offset_top = 415.0
+offset_right = 192.0
+offset_bottom = 446.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("2_ecppi")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = ExtResource("3_fxppd")
+theme_override_styles/hover = ExtResource("4_fxppd")
+text = "O programa imprime 0"
+script = ExtResource("2_2cddx")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Button" parent="." unique_id=2073877513]
+offset_left = 11.0
+offset_top = 747.0
+offset_right = 194.606
+offset_bottom = 801.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("2_ecppi")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("3_fxppd")
+theme_override_styles/hover = ExtResource("4_fxppd")
+text = "O programa continua 
+normalmente"
+script = ExtResource("2_2cddx")
+
+[node name="Label" type="Label" parent="." unique_id=1281073286]
+offset_right = 117.0
+offset_bottom = 88.0
+theme = ExtResource("2_ecppi")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+script = ExtResource("3_2cddx")
+
+[node name="Control" type="Control" parent="." unique_id=631537519]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 36.0
+offset_right = 785.0
+offset_bottom = 221.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1354604534]
+layout_mode = 0
+offset_right = 568.0
+offset_bottom = 287.0
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer" unique_id=604434263]
+layout_mode = 2
+theme = ExtResource("2_ecppi")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 52
+text = "O que acontece 
+se  dividir um 
+inteiro por 
+zero em C++?"
+horizontal_alignment = 1
+
+[node name="Button5" type="Button" parent="." unique_id=436308468]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("3_fxppd")
+theme_override_styles/hover = ExtResource("4_fxppd")
+icon = ExtResource("8_7638u")
+expand_icon = true
+script = ExtResource("4_6a7m8")
+
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

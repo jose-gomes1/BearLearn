@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://cncxyawrksrt3"]
+
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="1_h5nuk"]
+[ext_resource type="Script" uid="uid://pye16i337j45" path="res://scripts/button_explain.gd" id="1_x8erk"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="2_3ec78"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="3_dr3wg"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="3_mfio8"]
+[ext_resource type="StyleBox" uid="uid://d0gdvu5h1trcf" path="res://assets/themes/style2.tres" id="5_yqaae"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="7_3ec78"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="7_dr3wg"]
+[ext_resource type="Texture2D" uid="uid://eyuix5mlia6g" path="res://assets/arrow_right.svg" id="8_jyopv"]
+[ext_resource type="Texture2D" uid="uid://bbumjm0vco6wa" path="res://assets/arrow_left.svg" id="10_qqj2b"]
+[ext_resource type="Script" uid="uid://dmlnigs2p0oxy" path="res://scripts/explain_back.gd" id="11_t3m7g"]
+
+[node name="Node2D" type="Node2D" unique_id=1562083384]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=386468596 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("7_3ec78")
+
+[node name="Label" type="Label" parent="." unique_id=234644465]
+offset_left = 3.0
+offset_top = 13.0
+offset_right = 1321.0
+offset_bottom = 126.0
+scale = Vector2(0.488452, 0.634515)
+theme = ExtResource("1_h5nuk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "12. Qual é a biblioteca padrão usada em C++?"
+
+[node name="Label2" type="Label" parent="." unique_id=1226913102]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 2.000122
+offset_top = 265.0
+offset_right = 1925.854
+offset_bottom = 1246.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.338903, 0.519614)
+theme = ExtResource("1_h5nuk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "iostream é uma das bibliotecas 
+mais usadas do C++, 
+e faz parte da Biblioteca Padrão do C++
+(C++ Standard Library).
+Sempre que escrevemos 
+#include <iostream>,
+estamos a incluir suporte para entrada e
+saída de dados, como cin e cout.
+A Biblioteca Padrão também inclui outras
+bibliotecas úteis, como vector, string,
+map e algoritmos como
+sort e find."
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=183260617]
+offset_left = 184.0
+offset_top = 75.0
+offset_right = 338.0
+offset_bottom = 162.0
+scale = Vector2(1.67254, 1.65912)
+theme = ExtResource("1_h5nuk")
+theme_override_styles/normal = ExtResource("5_yqaae")
+text = "iostream"
+
+[node name="Button5" type="Button" parent="." unique_id=402187828]
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("2_3ec78")
+theme_override_styles/hover = ExtResource("3_dr3wg")
+icon = ExtResource("7_dr3wg")
+expand_icon = true
+script = ExtResource("3_mfio8")
+
+[node name="Button" type="Button" parent="." unique_id=1914587875]
+offset_left = 436.2588
+offset_top = 966.00006
+offset_right = 488.19382
+offset_bottom = 1009.4391
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("1_h5nuk")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("2_3ec78")
+theme_override_styles/hover = ExtResource("3_dr3wg")
+icon = ExtResource("8_jyopv")
+expand_icon = true
+script = ExtResource("1_x8erk")
+
+[node name="Button4" type="Button" parent="." unique_id=15617820]
+offset_left = 72.25883
+offset_top = 966.0
+offset_right = 124.193855
+offset_bottom = 1009.439
+scale = Vector2(2.6981, 2.96968)
+theme = ExtResource("1_h5nuk")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = ExtResource("2_3ec78")
+theme_override_styles/hover = ExtResource("3_dr3wg")
+icon = ExtResource("10_qqj2b")
+expand_icon = true
+script = ExtResource("11_t3m7g")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]

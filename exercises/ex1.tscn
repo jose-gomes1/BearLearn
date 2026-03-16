@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://munxbdl3kmwi"]
+
+[ext_resource type="Script" uid="uid://b8efiyjnum2a2" path="res://scripts/exercises.gd" id="1_df6d0"]
+[ext_resource type="Theme" uid="uid://bu4ke3uyt6pg5" path="res://assets/themes/theme.tres" id="1_nmhog"]
+[ext_resource type="Script" uid="uid://co28pi3xdqiuf" path="res://scripts/bgk.gd" id="1_y2vge"]
+[ext_resource type="Script" uid="uid://xv7tr8baqxyq" path="res://scripts/loss.gd" id="2_a8gee"]
+[ext_resource type="StyleBox" uid="uid://d0gdvu5h1trcf" path="res://assets/themes/style2.tres" id="2_if3p1"]
+[ext_resource type="Script" uid="uid://46smy035erkl" path="res://scripts/label.gd" id="3_ahpom"]
+[ext_resource type="StyleBox" uid="uid://b24dtnr26vxtv" path="res://assets/themes/style.tres" id="3_e2p6h"]
+[ext_resource type="StyleBox" uid="uid://pvhvsupjhhok" path="res://assets/themes/styleHover.tres" id="4_e2p6h"]
+[ext_resource type="Script" uid="uid://cslv32d7sn7ak" path="res://scripts/menu.gd" id="4_jmjkq"]
+[ext_resource type="Texture2D" uid="uid://bntf0rgvt0ptm" path="res://assets/home.svg" id="9_y2vge"]
+
+[node name="Node2D" type="Node2D" unique_id=2135669269]
+
+[node name="bgk" type="ColorRect" parent="." unique_id=1131879292 groups=["backgrounds"]]
+z_index = -1000
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+script = ExtResource("1_y2vge")
+
+[node name="Button" type="Button" parent="." unique_id=341197766]
+offset_left = 77.0
+offset_top = 189.0
+offset_right = 341.0
+offset_bottom = 358.0
+scale = Vector2(1.84821, 1.75933)
+theme = ExtResource("1_nmhog")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = ExtResource("2_if3p1")
+theme_override_styles/hover = ExtResource("4_e2p6h")
+text = "#include <iostream>
+using namespace std;
+
+int main() {
+    cout << \"Hello, World!\" << endl;
+    return 0;
+}"
+
+[node name="Button2" type="Button" parent="." unique_id=547015299]
+offset_left = 56.0
+offset_top = 562.0
+offset_right = 214.0
+offset_bottom = 593.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("1_nmhog")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = ExtResource("3_e2p6h")
+theme_override_styles/hover = ExtResource("4_e2p6h")
+text = "Hello, World!"
+script = ExtResource("1_df6d0")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="." unique_id=1541374773]
+offset_left = 46.0
+offset_top = 695.0
+offset_right = 215.0
+offset_bottom = 726.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("1_nmhog")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("3_e2p6h")
+theme_override_styles/hover = ExtResource("4_e2p6h")
+text = "O programa dá erro"
+script = ExtResource("2_a8gee")
+
+[node name="Button4" type="Button" parent="." unique_id=1980089003]
+offset_left = 49.0
+offset_top = 826.0
+offset_right = 215.729
+offset_bottom = 858.0
+scale = Vector2(3.43671, 3.18128)
+theme = ExtResource("1_nmhog")
+theme_override_styles/normal = ExtResource("3_e2p6h")
+theme_override_styles/hover = ExtResource("4_e2p6h")
+text = "Hello World!"
+script = ExtResource("2_a8gee")
+
+[node name="Label" type="Label" parent="." unique_id=2078322850]
+offset_right = 117.0
+offset_bottom = 88.0
+theme = ExtResource("1_nmhog")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+script = ExtResource("3_ahpom")
+
+[node name="Button5" type="Button" parent="Label" unique_id=613567706]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 972.0
+offset_right = 389.29968
+offset_bottom = 1090.0
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = ExtResource("3_e2p6h")
+theme_override_styles/hover = ExtResource("4_e2p6h")
+icon = ExtResource("9_y2vge")
+expand_icon = true
+script = ExtResource("4_jmjkq")
+
+[node name="Control" type="Control" parent="." unique_id=335707576]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 76.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=83475781]
+layout_mode = 0
+offset_right = 648.0
+offset_bottom = 135.0
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer" unique_id=1423694085]
+layout_mode = 2
+theme = ExtResource("1_nmhog")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 52
+text = "O que é imprimido 
+por este código?"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
